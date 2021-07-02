@@ -31,6 +31,10 @@ const nuevoJuego = () => {
 	tijera.style.opacity = "1"
 	papel.style.opacity = "1"
 
+	piedra.className = "btn_hover"
+	tijera.className = "btn_tijeras btn_hover"
+	papel.className  = "btn_hover"
+
 	cpuContainer.innerHTML = `<img class="cpu_img" src="./assets/pregunta.png" alt="sin_eleccion"><span class="cpu_span">Sin elección</span>`
 	cpuTitle.innerText = "Cuando usted elija la CPU elijira"
 }

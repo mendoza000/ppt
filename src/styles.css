@@ -184,6 +184,10 @@ border-image-slice: 1;
 	outline: none;
 }
 
+.pop_btn{
+	margin-top: 1em;
+}
+
 .nuevo_juego{
 	margin: 1em;
 	display: flex;
