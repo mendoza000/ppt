@@ -176,13 +176,31 @@ border-image-slice: 1;
 	animation-iteration-count: infinite;
 }
 
-.pop_btn{
+.pop_btn,
+.btn_nj{
 	border-radius: 10px;
 	padding: 0.5em 2em;
 	border: none;
 	outline: none;
 }
 
+.nuevo_juego{
+	margin: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn_nj{
+	border: 2px solid var(--color-primary);
+	background: transparent;
+	color: var(--color-primary);
+	transition: all 1s;
+}
+.btn_nj:hover{
+	background-color: var(--color-primary);
+	color: var(--color-bg);
+}
 
 /* Etiquetas */
 .cs-xo{
