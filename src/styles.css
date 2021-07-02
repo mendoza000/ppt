@@ -90,7 +90,7 @@ border-image-slice: 1;
 .btn_tijeras{
 	grid-column-start: 1;
 	grid-column-end: 3;
-	width: 92%
+	width: 100%
 }
 
 
@@ -214,4 +214,52 @@ border-image-slice: 1;
 }
 .bold{
 	font-weight: bolder;
+}
+
+@media screen and (min-width: 768px){
+	.container{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 2em;
+	}
+	.cpu_title{
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	.cpu{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: -1em;
+	}
+	.btns{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.btns_title{
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.btns_container{
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	.footer{
+		position: absolute;
+		bottom: 0;
+		width: 100vw;
+	}
+
+	.cpu_turno{
+		width: 240px;
+		height: 272px;
+	}
 }
