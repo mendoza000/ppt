@@ -8,6 +8,9 @@ const papel = document.querySelector('#btn_papel');
 const tijera = document.querySelector('#btn_tijera');
 const cargando = document.querySelector('.cargando');
 const cargandoImg = document.querySelector('.cargando_img');
+const pop = document.querySelector('.pop');
+const popTitle = document.querySelector('.pop_title');
+const popBtn = document.querySelector('.pop_btn');
 
 console.log("running");
 
@@ -32,18 +35,23 @@ const jugandoCPU = async () => {
 }
 
 const resultado = () => {
+	pop.style.left = "0"
 	if (selec === cum) {
-			alert("Tablas")
+			popTitle.innerText = "Ha quedado en tablas con la computadora 🤝"
 		}else if(selec === "piedra" && cum === "papel"){
-			alert("Perdio")
+			popTitle.innerText = "Ha perdido la partida 👎"
 		}else if(selec === "papel" && cum === "tijera"){
-			alert("Perdio")
+			popTitle.innerText = "Ha perdido la partida 👎"
 		}else if(selec === "tijera" && cum === "piedra"){
-			alert("Perdio")
+			popTitle.innerText = "Ha perdido la partida 👎"
 		}else{
-			alert("Gano")
+			popTitle.innerText = "Ha ganado la partida, excelente 👌"
 		}	
 }
+
+popBtn.addEventListener('click', function(e) {
+	pop.style.left = "-100vw"
+});
 
 piedra.addEventListener('click', async function(e) {
 	selec = "piedra"
@@ -56,18 +64,18 @@ piedra.addEventListener('click', async function(e) {
 
 papel.addEventListener('click', async function(e) {
 	selec = "papel"
-	await jugarPlayer(selec)
+	jugarPlayer(selec)
+	await jugandoCPU()
 	setTimeout(function() {
 		resultado()
 	}, 6500);
-	
 });
 
 tijera.addEventListener('click', async function(e) {
 	selec = "tijera"
-	await jugarPlayer(selec)
+	jugarPlayer(selec)
+	await jugandoCPU()
 	setTimeout(function() {
 		resultado()
 	}, 6500);
-	
 });
