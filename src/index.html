@@ -6,6 +6,14 @@
 	<title>PPT</title>
 </head>
 <body>
+
+	<div class="cargando">
+		<div class="cargando_content">
+			<span>La computadora esta elijiendo sus siguientes movimientos... 👀</span>
+			<img class="cargando_img" src="./assets/cargando.png" alt="cargando">
+		</div>
+	</div>
+
 	<header class="header">
 		<h1 class="header_title">Piedra, papel o tijeras</h1>
 
@@ -16,20 +24,34 @@
 		<div class="btns">
 			<span class="btns_title">Elija que quiere sacar en <span class="cs-xo bold">su turno!</span></span>
 			<div class="btns_container">
-				<button>
+				<button class="btn_hover" id="btn_piedra">
 					<img src="./assets/roca.png" alt="piedra">
 					Piedra
 				</button>
-				<button>
-					<img src="./assets/papel.png" alt="piedra">
+				<button class="btn_hover" id="btn_papel">
+					<img src="./assets/papel.png" alt="papel">
 					Papel
 				</button>
-				<button class="btn_tijeras">
-					<img src="./assets/tijeras.png" alt="piedra">
+				<button class="btn_tijeras btn_hover" id="btn_tijera">
+					<img src="./assets/tijeras.png" alt="tijera">
 					Tijera
 				</button>
 			</div>
 		</div>
+
+		<div class="cpu">
+			<span class="cpu_title">Cuando usted elija la CPU elijira</span>
+			<div class="cpu_turno">
+				<img class="cpu_img" src="./assets/pregunta.png" alt="sin_eleccion">
+				<span class="cpu_span">Sin elección</span>
+			</div>
+		</div>
 	</div>
 </body>
+
+<footer class="footer">
+	<span>&copy Hecho por Omar Mendoza. 🌵</span>
+</footer>
+
+<script src="./index.js"></script>
 </html>

@@ -23,7 +23,8 @@ body{
 	color: var(--color-text);
 }
 
-.header{
+.header,
+.footer{
 	background: linear-gradient(to right, var(--color-primary-o), var(--color-secondary));
 	padding: 1.5em 0;
 }
@@ -43,7 +44,8 @@ body{
 .btns{
 
 }
-.btns_title{
+.btns_title,
+.cpu_title{
 	text-align: center;
 	padding: 0.5em 1em;
 	border-bottom: 4px solid transparent;
@@ -56,7 +58,7 @@ border-image-slice: 1;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	grid-gap: 1em;
-	border-bottom: 2px solid var(--color-primary);
+	border-bottom: 2px dashed var(--color-primary);
 	padding-bottom: 2em;
 }
 .btns_container button{
@@ -72,9 +74,11 @@ border-image-slice: 1;
 	outline: none;
 	border-radius: 10px;
 	background: linear-gradient(to top, var(--color-primary-xl), var(--color-secondary-xl));
+	box-shadow: 0px 0px 10px -4px rgba(0,0,0,0.9);
 }
-.btns_container button:hover{
-	background: linear-gradient(to top, var(--color-primary), var(--color-secondary));
+
+.btn_hover:hover{
+	background: linear-gradient(to top, var(--color-primary-l), var(--color-secondary-l));
 	color: var(--color-bg);
 	font-weight: bolder;
 }
@@ -90,7 +94,87 @@ border-image-slice: 1;
 }
 
 
+.cpu_turno{
+	height: 15em;
+	width: 90%;
+	background-color: transparent;
+	margin: 2em auto;
+	border-radius: 10px;
+	border: 4px none var(--color-secondary);
+	border-style: dashed solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
+.cpu_img{
+	width: 8em;
+	margin-bottom: 1em;
+}
+.cpu_span{
+	font-size: 1.5em;
+}
+
+
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer span{
+	color: var(--color-bg);
+}
+
+.cargando{
+	background-color: rgba(250, 250, 250, 0.2);
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	backdrop-filter: blur(2px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: left 1s;
+	left: -100vw;
+	z-index: 100;
+}
+.cargando_content{
+	background: linear-gradient(to top, var(--color-primary-o), var(--color-secondary));
+	height: 10em;
+	width: 15em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	margin: auto;
+	padding: 1em;
+}
+.cargando_content span{
+	text-align: center;
+	color: var(--color-bg);
+}
+
+@keyframes rotateCargando {
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.cargando_img{
+	margin-top: 1em;
+	width: 3em;
+}
+.cargando_animate{
+	animation-name: rotateCargando;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
 
 
 /* Etiquetas */
