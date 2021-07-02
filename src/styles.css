@@ -1,0 +1,108 @@
+:root{
+	--color-primary-xo: #e3345e;
+	--color-primary-o: #f5456f;
+	--color-primary: #FF577F;
+	--color-primary-l: #ff7394;
+	--color-primary-xl: #ff85a2;
+
+	--color-secondary-xo: #d46831;
+	--color-secondary-o: #e8783f;
+	--color-secondary: #FF884B;
+	--color-secondary-l: #ff935c;
+	--color-secondary-xl: #ffa170;
+
+
+	--color-bg: #ebfffe;
+	--color-text: #242424;
+}
+
+html,
+body{
+	font-family: sans-serif;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+
+.header{
+	background: linear-gradient(to right, var(--color-primary-o), var(--color-secondary));
+	padding: 1.5em 0;
+}
+.header_title{
+	margin: 0;
+	text-align: center;
+	font-size: 1.5em;
+	color: var(--color-bg);
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+	margin: 2em auto;
+}
+.btns{
+
+}
+.btns_title{
+	text-align: center;
+	padding: 0.5em 1em;
+	border-bottom: 4px solid transparent;
+	border-image: linear-gradient(to right, var(--color-primary-o), var(--color-secondary));
+border-image-slice: 1;
+}
+.btns_container{
+	margin: 2em auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 1em;
+	border-bottom: 2px solid var(--color-primary);
+	padding-bottom: 2em;
+}
+.btns_container button{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	min-height: 7em;
+	min-width: 7em;
+	margin: auto;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	background: linear-gradient(to top, var(--color-primary-xl), var(--color-secondary-xl));
+}
+.btns_container button:hover{
+	background: linear-gradient(to top, var(--color-primary), var(--color-secondary));
+	color: var(--color-bg);
+	font-weight: bolder;
+}
+
+.btns_container button img{
+	width: 70px;
+	margin-bottom: 0.5em;
+}
+.btn_tijeras{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	width: 92%
+}
+
+
+
+
+
+/* Etiquetas */
+.cs-xo{
+	color: var(--color-secondary-xo);
+}
+.cs-o{
+	color: var(--color-secondary-o);
+}
+.cs{
+	color: var(--color-secondary);
+}
+.bold{
+	font-weight: bolder;
+}
